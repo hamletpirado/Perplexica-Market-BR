@@ -5,25 +5,23 @@ import {
   BookOpenText,
   Home,
   Search,
-  SquarePen,
   Settings,
   Plus,
-  ArrowLeft,
 } from 'lucide-react';
 import Link from 'next/link';
 import { useSelectedLayoutSegments } from 'next/navigation';
 import React, { useState, type ReactNode } from 'react';
 import Layout from './Layout';
-import {
-  Description,
-  Dialog,
-  DialogPanel,
-  DialogTitle,
-} from '@headlessui/react';
 import SettingsButton from './Settings/SettingsButton';
 
-const VerticalIconContainer = ({ children }: { children: ReactNode }) => {
-  return <div className="flex flex-col items-center w-full">{children}</div>;
+const VerticalIconContainer = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) => {
+  return <div className={cn('flex flex-col items-center w-full', className)}>{children}</div>;
 };
 
 const Sidebar = ({ children }: { children: React.ReactNode }) => {
@@ -35,33 +33,38 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
       icon: Home,
       href: '/',
       active: segments.length === 0 || segments.includes('c'),
-      label: 'Home',
+      label: 'Início',
     },
     {
       icon: Search,
       href: '/discover',
       active: segments.includes('discover'),
-      label: 'Discover',
+      label: 'Explorar',
     },
     {
       icon: BookOpenText,
       href: '/library',
       active: segments.includes('library'),
-      label: 'Library',
+      label: 'Conversas',
     },
   ];
 
   return (
     <div>
+      {/* Sidebar desktop */}
       <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-[72px] lg:flex-col border-r border-light-200 dark:border-dark-200">
-        <div className="flex grow flex-col items-center justify-between gap-y-5 overflow-y-auto bg-light-secondary dark:bg-dark-secondary px-2 py-8 shadow-sm shadow-light-200/10 dark:shadow-black/25">
+        <div className="flex grow flex-col items-center justify-start gap-y-4 overflow-y-auto bg-light-secondary dark:bg-dark-secondary px-2 py-6 shadow-sm shadow-light-200/10 dark:shadow-black/25">
+          
+          {/* Botão de adicionar */}
           <a
-            className="p-2.5 rounded-full bg-light-200 text-black/70 dark:bg-dark-200 dark:text-white/70 hover:opacity-70 hover:scale-105 tansition duration-200"
+            className="p-2.5 rounded-full bg-light-200 text-black/70 dark:bg-dark-200 dark:text-white/70 hover:opacity-70 hover:scale-105 transition duration-200"
             href="/"
           >
             <Plus size={19} className="cursor-pointer" />
           </a>
-          <VerticalIconContainer>
+
+          {/* Ícones de navegação movidos para o topo */}
+          <VerticalIconContainer className="mt-2">
             {navLinks.map((link, i) => (
               <Link
                 key={i}
@@ -69,7 +72,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
                 className={cn(
                   'relative flex flex-col items-center justify-center space-y-0.5 cursor-pointer w-full py-2 rounded-lg',
                   link.active
-                    ? 'text-black/70 dark:text-white/70 '
+                    ? 'text-black/70 dark:text-white/70'
                     : 'text-black/60 dark:text-white/60',
                 )}
               >
@@ -83,7 +86,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
                     size={25}
                     className={cn(
                       !link.active && 'group-hover:scale-105',
-                      'transition duration:200 m-1.5',
+                      'transition duration-200 m-1.5',
                     )}
                   />
                 </div>
@@ -101,10 +104,14 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
             ))}
           </VerticalIconContainer>
 
-          <SettingsButton />
+          {/* Botão de configurações fixo ao fundo */}
+          <div className="mt-auto mb-4">
+            <SettingsButton />
+          </div>
         </div>
       </div>
 
+      {/* Barra inferior (mobile) */}
       <div className="fixed bottom-0 w-full z-50 flex flex-row items-center gap-x-6 bg-light-secondary dark:bg-dark-secondary px-4 py-4 shadow-sm lg:hidden">
         {navLinks.map((link, i) => (
           <Link
@@ -126,6 +133,7 @@ const Sidebar = ({ children }: { children: React.ReactNode }) => {
         ))}
       </div>
 
+      {/* Conteúdo principal */}
       <Layout>{children}</Layout>
     </div>
   );

@@ -1,6 +1,6 @@
 'use client';
 
-import { Globe2Icon } from 'lucide-react';
+import { SearchIcon } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
@@ -16,23 +16,23 @@ export interface Discover {
 
 const topics: { key: string; display: string }[] = [
   {
-    display: 'Tech & Science',
+    display: 'Tecnologia',
     key: 'tech',
   },
   {
-    display: 'Finance',
+    display: 'Finanças',
     key: 'finance',
   },
   {
-    display: 'Art & Culture',
+    display: 'Arte e Cultura',
     key: 'art',
   },
   {
-    display: 'Sports',
+    display: 'Esportes',
     key: 'sports',
   },
   {
-    display: 'Entertainment',
+    display: 'Entretenimento',
     key: 'entertainment',
   },
 ];
@@ -62,8 +62,8 @@ const Page = () => {
 
       setDiscover(data.blogs);
     } catch (err: any) {
-      console.error('Error fetching data:', err.message);
-      toast.error('Error fetching data');
+      console.error('Erro ao buscar dados:', err.message);
+      toast.error('Erro ao buscar notícias');
     } finally {
       setLoading(false);
     }
@@ -79,12 +79,12 @@ const Page = () => {
         <div className="flex flex-col pt-10 border-b border-light-200/20 dark:border-dark-200/20 pb-6 px-2">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
             <div className="flex items-center justify-center">
-              <Globe2Icon size={45} className="mb-2.5" />
+              <SearchIcon size={45} className="mb-2.5" />
               <h1
                 className="text-5xl font-normal p-2"
                 style={{ fontFamily: 'PP Editorial, serif' }}
               >
-                Discover
+                Explorar
               </h1>
             </div>
             <div className="flex flex-row items-center space-x-2 overflow-x-auto">

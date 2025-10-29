@@ -170,7 +170,7 @@ const Searchvideos = ({
                   ))}
                 </div>
                 <p className="text-black/70 dark:text-white/70 text-xs">
-                  View {videos.length - 3} more
+                  Ver mais {videos.length - 3}
                 </p>
               </button>
             )}

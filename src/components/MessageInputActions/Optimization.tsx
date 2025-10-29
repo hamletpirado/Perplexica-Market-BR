@@ -13,19 +13,19 @@ const OptimizationModes = [
   {
     key: 'speed',
     title: 'Speed',
-    description: 'Prioritize speed and get the quickest possible answer.',
+    description: 'Priorize a velocidade e obtenha a resposta mais rápida possível.',
     icon: <Zap size={16} className="text-[#FF9800]" />,
   },
   {
     key: 'balanced',
     title: 'Balanced',
-    description: 'Find the right balance between speed and accuracy',
+    description: 'Encontre o equilíbrio certo entre velocidade e precisão.',
     icon: <Sliders size={16} className="text-[#4CAF50]" />,
   },
   {
     key: 'quality',
     title: 'Quality (Soon)',
-    description: 'Get the most thorough and accurate answer',
+    description: 'Obtenha a resposta mais completa e precisa possível.',
     icon: (
       <Star
         size={16}

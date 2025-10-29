@@ -4,8 +4,8 @@
 import React, { MutableRefObject } from 'react';
 import { cn } from '@/lib/utils';
 import {
-  BookCopy,
-  Disc3,
+  Target,        // ← NOVO: Alvo para Fontes
+  Clock,         // ← NOVO: Relógio para Resposta
   Volume2,
   StopCircle,
   Layers3,
@@ -84,9 +84,9 @@ const MessageBox = ({
             section.sourceMessage.sources.length > 0 && (
               <div className="flex flex-col space-y-2">
                 <div className="flex flex-row items-center space-x-2">
-                  <BookCopy className="text-black dark:text-white" size={20} />
+                  <Target className="text-black dark:text-white" size={20} />
                   <h3 className="text-black dark:text-white font-medium text-xl">
-                    Fonte
+                    Fontes
                   </h3>
                 </div>
                 <MessageSources sources={section.sourceMessage.sources} />
@@ -96,7 +96,7 @@ const MessageBox = ({
           <div className="flex flex-col space-y-2">
             {section.sourceMessage && (
               <div className="flex flex-row items-center space-x-2">
-                <Disc3
+                <Clock
                   className={cn(
                     'text-black dark:text-white',
                     isLast && loading ? 'animate-spin' : 'animate-none',
@@ -166,7 +166,7 @@ const MessageBox = ({
                           size={20}
                         />
                         <h3 className="text-black dark:text-white font-medium text-xl">
-                          Related
+                          Veja também
                         </h3>
                       </div>
                       <div className="space-y-0">

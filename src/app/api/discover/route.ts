@@ -2,24 +2,55 @@ import { searchSearxng } from '@/lib/searxng';
 
 const websitesForTopic = {
   tech: {
-    query: ['technology news', 'latest tech', 'AI', 'science and innovation'],
-    links: ['techcrunch.com', 'wired.com', 'theverge.com'],
+    query: ['tecnologia', 'inovação', 'inteligência artificial', 'ciência e tecnologia'],
+    links: ['tecnoblog.net', 'canaltech.com.br', 'olhardigital.com.br'],
   },
   finance: {
-    query: ['finance news', 'economy', 'stock market', 'investing'],
-    links: ['bloomberg.com', 'cnbc.com', 'marketwatch.com'],
+    query: ['economia', 'mercado financeiro', 'bolsa de valores', 'investimentos'],
+    links: ['infomoney.com.br', 'valor.globo.com', 'economia.uol.com.br','b3.com.br','startups.com.br'],
   },
   art: {
-    query: ['art news', 'culture', 'modern art', 'cultural events'],
-    links: ['artnews.com', 'hyperallergic.com', 'theartnewspaper.com'],
-  },
+  query: [
+    'arte', 
+    'cultura', 
+    'arte contemporânea', 
+    'eventos culturais', 
+    'música brasileira', 
+    'teatro', 
+    'literatura',
+    'art',
+    'contemporary art',
+    'culture'
+  ],
+  links: [
+    // Sites brasileiros
+    'revistacult.uol.com.br',
+    'select.art.br',
+    'arteref.com',
+    'revistazum.com.br',
+    'artebrasileiros.com.br',
+    'suplementopernambuco.com.br',
+    'revistaserrote.com.br',
+    'continente.com.br',
+    
+    // Sites internacionais de prestígio
+    'artforum.com',
+    'artnews.com',
+    'theartnewspaper.com',
+    'frieze.com',
+    'artsy.net',
+    'hyperallergic.com',
+    'e-flux.com',
+    'artreview.com',
+  ],
+},
   sports: {
-    query: ['sports news', 'latest sports', 'cricket football tennis'],
-    links: ['espn.com', 'bbc.com/sport', 'skysports.com'],
+    query: ['esportes', 'futebol', 'notícias esportivas', 'campeonatos'],
+    links: ['ge.globo.com', 'espn.com.br', 'lance.com.br','colunadofla.com'],
   },
   entertainment: {
-    query: ['entertainment news', 'movies', 'TV shows', 'celebrities'],
-    links: ['hollywoodreporter.com', 'variety.com', 'deadline.com'],
+    query: ['entretenimento', 'cinema', 'séries', 'celebridades'],
+    links: ['omelete.com.br', 'adorocinema.com', 'popline.com.br'],
   },
 };
 
@@ -48,7 +79,7 @@ export const GET = async (req: Request) => {
                 await searchSearxng(`site:${link} ${query}`, {
                   engines: ['bing news'],
                   pageno: 1,
-                  language: 'en',
+                  language: 'pt-BR',
                 })
               ).results;
             }),
@@ -70,7 +101,7 @@ export const GET = async (req: Request) => {
           {
             engines: ['bing news'],
             pageno: 1,
-            language: 'en',
+            language: 'pt-BR',
           },
         )
       ).results;

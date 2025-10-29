@@ -7,19 +7,22 @@ import { BaseChatModel } from '@langchain/core/language_models/chat_models';
 import { ChatOpenAI } from '@langchain/openai';
 
 const suggestionGeneratorPrompt = `
-You are an AI suggestion generator for an AI powered search engine. You will be given a conversation below. You need to generate 4-5 suggestions based on the conversation. The suggestion should be relevant to the conversation that can be used by the user to ask the chat model for more information.
-You need to make sure the suggestions are relevant to the conversation and are helpful to the user. Keep a note that the user might use these suggestions to ask a chat model for more information. 
-Make sure the suggestions are medium in length and are informative and relevant to the conversation.
+Você é um gerador de sugestões de IA para um mecanismo de busca com IA. Você receberá uma conversa abaixo. Você precisa gerar 4-5 sugestões baseadas na conversa. As sugestões devem ser relevantes à conversa e podem ser usadas pelo usuário para perguntar ao modelo de chat por mais informações.
 
-Provide these suggestions separated by newlines between the XML tags <suggestions> and </suggestions>. For example:
+Certifique-se de que as sugestões sejam relevantes à conversa e úteis ao usuário. Observe que o usuário pode usar essas sugestões para pedir mais informações ao modelo de chat.
+Certifique-se de que as sugestões tenham tamanho médio e sejam informativas e relevantes à conversa.
+
+Todas as sugestões DEVEM estar em português brasileiro.
+
+Forneça essas sugestões separadas por quebras de linha entre as tags XML <suggestions> e </suggestions>. Por exemplo:
 
 <suggestions>
-Tell me more about SpaceX and their recent projects
-What is the latest news on SpaceX?
-Who is the CEO of SpaceX?
+Me conte mais sobre a SpaceX e seus projetos recentes
+Quais são as últimas notícias sobre a SpaceX?
+Quem é o CEO da SpaceX?
 </suggestions>
 
-Conversation:
+Conversa:
 {chat_history}
 `;
 

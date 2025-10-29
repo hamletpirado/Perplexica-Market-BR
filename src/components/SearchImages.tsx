@@ -137,7 +137,7 @@ const SearchImages = ({
                   ))}
                 </div>
                 <p className="text-black/70 dark:text-white/70 text-xs">
-                  View {images.length - 3} more
+                  Ver mais {images.length - 3}
                 </p>
               </button>
             )}

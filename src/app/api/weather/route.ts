@@ -9,7 +9,7 @@ export const POST = async (req: Request) => {
     if (!body.lat || !body.lng) {
       return Response.json(
         {
-          message: 'Invalid request.',
+          message: 'Requisição inválida.',
         },
         { status: 400 },
       );
@@ -24,10 +24,10 @@ export const POST = async (req: Request) => {
     const data = await res.json();
 
     if (data.error) {
-      console.error(`Error fetching weather data: ${data.reason}`);
+      console.error(`Erro ao buscar dados climáticos: ${data.reason}`);
       return Response.json(
         {
-          message: 'An error has occurred.',
+          message: 'Ocorreu um erro.',
         },
         { status: 500 },
       );
@@ -58,113 +58,113 @@ export const POST = async (req: Request) => {
     switch (code) {
       case 0:
         weather.icon = `clear-${dayOrNight}`;
-        weather.condition = 'Clear';
+        weather.condition = 'Limpo';
         break;
 
       case 1:
-        weather.condition = 'Mainly Clear';
+        weather.condition = 'Predominantemente Limpo';
       case 2:
-        weather.condition = 'Partly Cloudy';
+        weather.condition = 'Parcialmente Nublado';
       case 3:
         weather.icon = `cloudy-1-${dayOrNight}`;
-        weather.condition = 'Cloudy';
+        weather.condition = 'Nublado';
         break;
 
       case 45:
-        weather.condition = 'Fog';
+        weather.condition = 'Neblina';
       case 48:
         weather.icon = `fog-${dayOrNight}`;
-        weather.condition = 'Fog';
+        weather.condition = 'Neblina';
         break;
 
       case 51:
-        weather.condition = 'Light Drizzle';
+        weather.condition = 'Garoa Leve';
       case 53:
-        weather.condition = 'Moderate Drizzle';
+        weather.condition = 'Garoa Moderada';
       case 55:
         weather.icon = `rainy-1-${dayOrNight}`;
-        weather.condition = 'Dense Drizzle';
+        weather.condition = 'Garoa Intensa';
         break;
 
       case 56:
-        weather.condition = 'Light Freezing Drizzle';
+        weather.condition = 'Garoa Congelante Leve';
       case 57:
         weather.icon = `frost-${dayOrNight}`;
-        weather.condition = 'Dense Freezing Drizzle';
+        weather.condition = 'Garoa Congelante Intensa';
         break;
 
       case 61:
-        weather.condition = 'Slight Rain';
+        weather.condition = 'Chuva Leve';
       case 63:
-        weather.condition = 'Moderate Rain';
+        weather.condition = 'Chuva Moderada';
       case 65:
-        weather.condition = 'Heavy Rain';
+        weather.condition = 'Chuva Forte';
         weather.icon = `rainy-2-${dayOrNight}`;
         break;
 
       case 66:
-        weather.condition = 'Light Freezing Rain';
+        weather.condition = 'Chuva Congelante Leve';
       case 67:
-        weather.condition = 'Heavy Freezing Rain';
+        weather.condition = 'Chuva Congelante Forte';
         weather.icon = 'rain-and-sleet-mix';
         break;
 
       case 71:
-        weather.condition = 'Slight Snow Fall';
+        weather.condition = 'Neve Leve';
       case 73:
-        weather.condition = 'Moderate Snow Fall';
+        weather.condition = 'Neve Moderada';
       case 75:
-        weather.condition = 'Heavy Snow Fall';
+        weather.condition = 'Neve Forte';
         weather.icon = `snowy-2-${dayOrNight}`;
         break;
 
       case 77:
-        weather.condition = 'Snow';
+        weather.condition = 'Neve';
         weather.icon = `snowy-1-${dayOrNight}`;
         break;
 
       case 80:
-        weather.condition = 'Slight Rain Showers';
+        weather.condition = 'Pancadas de Chuva Leves';
       case 81:
-        weather.condition = 'Moderate Rain Showers';
+        weather.condition = 'Pancadas de Chuva Moderadas';
       case 82:
-        weather.condition = 'Heavy Rain Showers';
+        weather.condition = 'Pancadas de Chuva Fortes';
         weather.icon = `rainy-3-${dayOrNight}`;
         break;
 
       case 85:
-        weather.condition = 'Slight Snow Showers';
+        weather.condition = 'Pancadas de Neve Leves';
       case 86:
-        weather.condition = 'Moderate Snow Showers';
+        weather.condition = 'Pancadas de Neve Moderadas';
       case 87:
-        weather.condition = 'Heavy Snow Showers';
+        weather.condition = 'Pancadas de Neve Fortes';
         weather.icon = `snowy-3-${dayOrNight}`;
         break;
 
       case 95:
-        weather.condition = 'Thunderstorm';
+        weather.condition = 'Tempestade';
         weather.icon = `scattered-thunderstorms-${dayOrNight}`;
         break;
 
       case 96:
-        weather.condition = 'Thunderstorm with Slight Hail';
+        weather.condition = 'Tempestade com Granizo Leve';
       case 99:
-        weather.condition = 'Thunderstorm with Heavy Hail';
+        weather.condition = 'Tempestade com Granizo Forte';
         weather.icon = 'severe-thunderstorm';
         break;
 
       default:
         weather.icon = `clear-${dayOrNight}`;
-        weather.condition = 'Clear';
+        weather.condition = 'Limpo';
         break;
     }
 
     return Response.json(weather);
   } catch (err) {
-    console.error('An error occurred while getting home widgets', err);
+    console.error('Ocorreu um erro ao obter widgets da home', err);
     return Response.json(
       {
-        message: 'An error has occurred.',
+        message: 'Ocorreu um erro.',
       },
       {
         status: 500,
