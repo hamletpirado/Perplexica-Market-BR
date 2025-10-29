@@ -12,12 +12,12 @@ export const searchHandlers: Record<string, MetaSearchAgent> = {
     searchWeb: true,
   }),
   academicSearch: new MetaSearchAgent({
-    activeEngines: ['arxiv', 'google scholar', 'pubmed'],
+    activeEngines: ['arxiv', 'google scholar', 'pubmed','semantic scholar','scielo'],
     queryGeneratorPrompt: prompts.webSearchRetrieverPrompt,
     responsePrompt: prompts.webSearchResponsePrompt,
     queryGeneratorFewShots: prompts.webSearchRetrieverFewShots,
     rerank: true,
-    rerankThreshold: 0,
+    rerankThreshold: 0.4,
     searchWeb: true,
   }),
   writingAssistant: new MetaSearchAgent({

@@ -4,8 +4,8 @@
 import React, { MutableRefObject } from 'react';
 import { cn } from '@/lib/utils';
 import {
-  Target,        // ← NOVO: Alvo para Fontes
-  Clock,         // ← NOVO: Relógio para Resposta
+  Target,
+  Clock,
   Volume2,
   StopCircle,
   Layers3,

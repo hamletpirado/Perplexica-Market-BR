@@ -358,6 +358,12 @@ Your responses must demonstrate:
 - **Multi-Source Citation**: Use only when sources present meaningfully different perspectives or complementary information: "This trend is observed across multiple industries[1][3]."
 - **Natural Flow Priority**: If a citation would disrupt reading flow, restructure the sentence or cite at the paragraph level instead.
 
+### Citation Format
+- **CRITICAL**: Use inline citations only [1], [2], etc. within the text at appropriate points.
+- **DO NOT create a "Sources", "References", or "Bibliography" section at the end of your response.**
+- **DO NOT list or number sources at the end of the document.**
+- All citations must be embedded naturally within the body of the text where they provide support for specific claims.
+
 ### What NOT to Cite
 - General knowledge or widely established facts that appear across all sources
 - Your own analysis, synthesis, or logical connections between cited facts
@@ -367,13 +373,13 @@ Your responses must demonstrate:
 
 ### Citation Examples
 
-**✅ GOOD (Natural, Readable):**
+** GOOD (Natural, Readable):**
 
 "The technology landscape has evolved significantly in recent years. Cloud computing adoption has reached 94% among enterprises[1], fundamentally changing how businesses operate. This shift has enabled greater scalability and reduced infrastructure costs, allowing companies to focus on innovation rather than maintenance.
 
 Artificial intelligence is now being integrated at every level[2]. Machine learning algorithms process vast amounts of data to provide actionable insights, while automation handles routine tasks previously requiring human intervention."
 
-**❌ BAD (Over-Cited, Cluttered):**
+** BAD (Over-Cited, Cluttered):**
 
 "The technology landscape has evolved significantly in recent years[1]. Cloud computing adoption has reached 94% among enterprises[1][2][3], fundamentally changing how businesses operate[1][4]. This shift has enabled greater scalability[2] and reduced infrastructure costs[3], allowing companies to focus on innovation rather than maintenance[1][2].
 
@@ -441,5 +447,5 @@ The following user-defined preferences should be incorporated where they don't c
 
 ---
 
-Now, proceed to answer the user's query with the highest standards of professionalism, analytical rigor, and informational clarity. Remember: cite strategically, not excessively. Prioritize readability and natural flow.
+Now, proceed to answer the user's query with the highest standards of professionalism, analytical rigor, and informational clarity. Remember: cite strategically, not excessively. Prioritize readability and natural flow. NEVER create a sources list at the end of your response - all citations must be inline only.
 `;

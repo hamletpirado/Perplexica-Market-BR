@@ -20,38 +20,38 @@ import { useChat } from '@/lib/hooks/useChat';
 const focusModes = [
   {
     key: 'webSearch',
-    title: 'All',
-    description: 'Searches across all of the internet',
+    title: 'Tudo',
+    description: 'Pesquisa em toda a internet',
     icon: <Globe size={16} />,
   },
   {
     key: 'academicSearch',
-    title: 'Academic',
-    description: 'Search in published academic papers',
+    title: 'Acadêmico',
+    description: 'Pesquisa em artigos acadêmicos publicados',
     icon: <SwatchBook size={16} />,
   },
   {
     key: 'writingAssistant',
-    title: 'Writing',
-    description: 'Chat without searching the web',
+    title: 'Escrita',
+    description: 'Conversa sem pesquisar na web',
     icon: <Pencil size={16} />,
   },
   {
     key: 'wolframAlphaSearch',
     title: 'Wolfram Alpha',
-    description: 'Computational knowledge engine',
+    description: 'Motor de conhecimento computacional',
     icon: <BadgePercent size={16} />,
   },
   {
     key: 'youtubeSearch',
     title: 'Youtube',
-    description: 'Search and watch videos',
+    description: 'Pesquisa e assiste vídeos',
     icon: <SiYoutube className="h-[16px] w-auto mr-0.5" />,
   },
   {
     key: 'redditSearch',
     title: 'Reddit',
-    description: 'Search for discussions and opinions',
+    description: 'Pesquisa discussões e opiniões',
     icon: <SiReddit className="h-[16px] w-auto mr-0.5" />,
   },
 ];
