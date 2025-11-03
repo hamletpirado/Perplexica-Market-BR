@@ -1,3 +1,6 @@
+// ============================================
+// FILE: src/app/discover/page.tsx (CÓDIGO COMPLETO ATUALIZADO)
+// ============================================
 'use client';
 
 import { SearchIcon } from 'lucide-react';
@@ -6,6 +9,7 @@ import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 import SmallNewsCard from '@/components/Discover/SmallNewsCard';
 import MajorNewsCard from '@/components/Discover/MajorNewsCard';
+import FinancialChart from '@/components/Discover/FinancialChart';
 
 export interface Discover {
   title: string;
@@ -23,10 +27,10 @@ const topics: { key: string; display: string }[] = [
     display: 'Finanças',
     key: 'finance',
   },
-  {
-    display: 'Arte e Cultura',
-    key: 'art',
-  },
+  // {
+  //   display: 'Arte e Cultura',
+  //   key: 'art',
+  // },
   {
     display: 'Esportes',
     key: 'sports',
@@ -105,6 +109,13 @@ const Page = () => {
             </div>
           </div>
         </div>
+
+        {/* GRÁFICO FINANCEIRO - Aparece apenas quando 'Finanças' está ativo */}
+        {activeTopic === 'finance' && !loading && (
+          <div className="mt-6 px-2">
+            <FinancialChart />
+          </div>
+        )}
 
         {loading ? (
           <div className="flex flex-row items-center justify-center min-h-screen">
