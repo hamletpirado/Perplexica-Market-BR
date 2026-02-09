@@ -69,7 +69,7 @@ Esta versão inclui as seguintes melhorias e adições:
 
 ## 🎬 Preview
 
-![video-preview](.assets/perplexica-preview.gif)
+![video-preview](.assets/perplexicabr-screenshot.png)
 
 *Demonstração dos gráficos financeiros em ação*
 
