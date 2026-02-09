@@ -1,268 +1,300 @@
-# 🚀 Perplexica - An AI-powered search engine 🔎 <!-- omit in toc -->
+# 🚀 Perplexica Market BR - Motor de Busca com IA e Análise Financeira <!-- omit in toc -->
+
+> **Versão Brasileira do Perplexica com Foco em Mercado Financeiro** - Um fork traduzido e aprimorado do [Perplexica](https://github.com/ItzCrazyKns/Perplexica), com recursos adicionais de análise financeira e gráficos interativos para o mercado brasileiro.
 
 <div align="center" markdown="1">
-   <sup>Special thanks to:</sup>
-   <br>
-   <br>
-   <a href="https://www.warp.dev/perplexica">
-      <img alt="Warp sponsorship" width="400" src="https://github.com/user-attachments/assets/775dd593-9b5f-40f1-bf48-479faff4c27b">
-   </a>
 
-### [Warp, the AI Devtool that lives in your terminal](https://www.warp.dev/perplexica)
-
-[Available for MacOS, Linux, & Windows](https://www.warp.dev/perplexica)
+[![GitHub Repo stars](https://img.shields.io/github/stars/ItzCrazyKns/Perplexica?style=social)](https://github.com/ItzCrazyKns/Perplexica/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Discord](https://dcbadge.limes.pink/api/server/26aArMy8tT?style=flat)](https://discord.gg/26aArMy8tT)
 
 </div>
 
 <hr/>
 
-[![Discord](https://dcbadge.limes.pink/api/server/26aArMy8tT?style=flat)](https://discord.gg/26aArMy8tT)
+![preview](.assets/perplexica-screenshot.png)
 
-![preview](.assets/perplexica-screenshot.png?)
+## 📋 Índice <!-- omit in toc -->
 
-## Table of Contents <!-- omit in toc -->
-
-- [Overview](#overview)
+- [Sobre Este Projeto](#sobre-este-projeto)
+- [O Que É o Perplexica](#o-que-é-o-perplexica)
+- [Novidades da Versão Brasileira](#novidades-da-versão-brasileira)
 - [Preview](#preview)
-- [Features](#features)
-- [Installation](#installation)
-  - [Getting Started with Docker (Recommended)](#getting-started-with-docker-recommended)
-  - [Non-Docker Installation](#non-docker-installation)
-  - [Ollama Connection Errors](#ollama-connection-errors)
-  - [Lemonade Connection Errors](#lemonade-connection-errors)
-- [Using as a Search Engine](#using-as-a-search-engine)
-- [Using Perplexica's API](#using-perplexicas-api)
-- [Expose Perplexica to a network](#expose-perplexica-to-network)
-- [One-Click Deployment](#one-click-deployment)
-- [Upcoming Features](#upcoming-features)
-- [Support Us](#support-us)
-  - [Donations](#donations)
-- [Contribution](#contribution)
-- [Help and Support](#help-and-support)
+- [Recursos](#recursos)
+- [Instalação](#instalação)
+  - [Instalação com Docker (Recomendado)](#instalação-com-docker-recomendado)
+  - [Instalação Sem Docker](#instalação-sem-docker)
+  - [Solução de Problemas](#solução-de-problemas)
+- [Usando como Motor de Busca](#usando-como-motor-de-busca)
+- [Usando a API](#usando-a-api)
+- [Contribuição](#contribuição)
+- [Suporte](#suporte)
+- [Licença](#licença)
+- [Agradecimentos](#agradecimentos)
 
-## Overview
+## 🇧🇷 Sobre Este Projeto
 
-Perplexica is an open-source AI-powered searching tool or an AI-powered search engine that goes deep into the internet to find answers. Inspired by Perplexity AI, it's an open-source option that not just searches the web but understands your questions. It uses advanced machine learning algorithms like similarity searching and embeddings to refine results and provides clear answers with sources cited.
+Este é um **fork brasileiro** do [Perplexica](https://github.com/ItzCrazyKns/Perplexica), desenvolvido por [ItzCrazyKns](https://github.com/ItzCrazyKns). Esta versão foi criada para atender especificamente o público brasileiro, com tradução completa da interface e recursos adicionais focados no mercado financeiro nacional.
 
-Using SearxNG to stay current and fully open source, Perplexica ensures you always get the most up-to-date information without compromising your privacy.
+### Créditos ao Projeto Original
 
-Want to know more about its architecture and how it works? You can read it [here](https://github.com/ItzCrazyKns/Perplexica/tree/master/docs/architecture/README.md).
+Todo o código base e conceito inicial pertencem ao projeto [Perplexica](https://github.com/ItzCrazyKns/Perplexica) e seus colaboradores. Este fork mantém o espírito open-source do projeto original enquanto expande suas capacidades para o contexto brasileiro.
 
-## Preview
+## 🔍 O Que É o Perplexica
+
+Perplexica é um **motor de busca com IA focado em privacidade** que roda totalmente em seu próprio hardware. Ele combina conhecimento da vasta internet com suporte para **LLMs locais** (Ollama) e provedores em nuvem (OpenAI, Claude, Groq), entregando respostas precisas com **fontes citadas** mantendo suas buscas completamente privadas.
+
+Quer saber mais sobre sua arquitetura e como funciona? Você pode ler [aqui](https://github.com/ItzCrazyKns/Perplexica/tree/master/docs/architecture/README.md).
+
+## ✨ Novidades da Versão Brasileira
+
+Esta versão inclui as seguintes melhorias e adições:
+
+### 🌐 Tradução Completa
+- ✅ Interface totalmente traduzida para português brasileiro
+- ✅ Mensagens de sistema e notificações em português
+- ✅ Documentação adaptada para o público brasileiro
+
+### 📈 Gráficos Financeiros Integrados
+- 📊 **Visualização de histórico de preços de ações** - Acompanhe a evolução de ações da B3 e mercados internacionais
+- 💰 **Gráficos de criptomoedas** - Veja o histórico de preços de Bitcoin, Ethereum e outras criptomoedas
+- 📉 **Análise técnica visual** - Gráficos interativos com dados históricos
+- 🔄 **Atualização em tempo real** - Dados atualizados do mercado financeiro
+- 🎯 **Seção de finanças dedicada** - Modo de foco especial para consultas financeiras com visualizações integradas
+
+### 🇧🇷 Otimizações para o Brasil
+- Melhor compreensão de termos e contextos brasileiros
+- Suporte aprimorado para buscas em português
+- Dados e informações relevantes ao mercado brasileiro
+
+## 🎬 Preview
 
 ![video-preview](.assets/perplexica-preview.gif)
 
-## Features
+*Demonstração dos gráficos financeiros em ação*
 
-- **Local LLMs**: You can utilize local LLMs such as Qwen, DeepSeek, Llama, and Mistral.
-- **Two Main Modes:**
-  - **Copilot Mode:** (In development) Boosts search by generating different queries to find more relevant internet sources. Like normal search instead of just using the context by SearxNG, it visits the top matches and tries to find relevant sources to the user's query directly from the page.
-  - **Normal Mode:** Processes your query and performs a web search.
-- **Focus Modes:** Special modes to better answer specific types of questions. Perplexica currently has 6 focus modes:
-  - **All Mode:** Searches the entire web to find the best results.
-  - **Writing Assistant Mode:** Helpful for writing tasks that do not require searching the web.
-  - **Academic Search Mode:** Finds articles and papers, ideal for academic research.
-  - **YouTube Search Mode:** Finds YouTube videos based on the search query.
-  - **Wolfram Alpha Search Mode:** Answers queries that need calculations or data analysis using Wolfram Alpha.
-  - **Reddit Search Mode:** Searches Reddit for discussions and opinions related to the query.
-- **Current Information:** Some search tools might give you outdated info because they use data from crawling bots and convert them into embeddings and store them in a index. Unlike them, Perplexica uses SearxNG, a metasearch engine to get the results and rerank and get the most relevant source out of it, ensuring you always get the latest information without the overhead of daily data updates.
-- **API**: Integrate Perplexica into your existing applications and make use of its capibilities.
+## 🌟 Recursos
 
-It has many more features like image and video search. Some of the planned features are mentioned in [upcoming features](#upcoming-features).
+### Recursos Herdados do Perplexica Original
 
-## Installation
+🤖 **Suporte para todos os principais provedores de IA** - Use LLMs locais através do Ollama ou conecte-se ao OpenAI, Anthropic Claude, Google Gemini, Groq e muito mais.
 
-There are mainly 2 ways of installing Perplexica - With Docker, Without Docker. Using Docker is highly recommended.
+⚡ **Modos de busca inteligentes** - Escolha o Modo Balanceado para buscas do dia a dia, Modo Rápido quando precisar de respostas rápidas, ou aguarde o Modo Qualidade (em breve) para pesquisas profundas.
 
-### Getting Started with Docker (Recommended)
+🎯 **Seis modos de foco especializados** - Obtenha melhores resultados com modos projetados para tarefas específicas:
+- **Modo All:** Pesquisa toda a web para encontrar os melhores resultados
+- **Modo Assistente de Escrita:** Útil para tarefas de escrita que não requerem pesquisa na web
+- **Modo Pesquisa Acadêmica:** Encontra artigos e papers, ideal para pesquisa acadêmica
+- **Modo Pesquisa YouTube:** Encontra vídeos do YouTube baseados na consulta
+- **Modo Wolfram Alpha:** Responde consultas que precisam de cálculos ou análise de dados
+- **Modo Pesquisa Reddit:** Pesquisa no Reddit por discussões e opiniões relacionadas
 
-Perplexica can be easily run using Docker. Simply run the following command:
+🔍 **Busca web powered by SearxNG** - Acesse múltiplos motores de busca mantendo sua identidade privada.
+
+📷 **Busca de imagens e vídeos** - Encontre conteúdo visual além de resultados de texto.
+
+📄 **Upload de arquivos** - Envie documentos e faça perguntas sobre eles. PDFs, arquivos de texto, imagens - Perplexica entende todos.
+
+🌐 **Busca em domínios específicos** - Limite sua busca a websites específicos quando souber onde procurar.
+
+💡 **Sugestões inteligentes** - Receba sugestões inteligentes de busca conforme você digita.
+
+📚 **Descobrir** - Navegue por artigos interessantes e conteúdo em alta durante o dia.
+
+🕒 **Histórico de buscas** - Cada busca é salva localmente para que você possa revisitar suas descobertas a qualquer momento.
+
+### Recursos Exclusivos da Versão Brasileira
+
+📊 **Gráficos Financeiros** - Visualização interativa de dados do mercado financeiro:
+- Histórico de preços de ações (B3 e mercados internacionais)
+- Gráficos de criptomoedas com dados em tempo real
+- Análise técnica com indicadores visuais
+- Interface em português com dados formatados para o Brasil
+
+## 📥 Instalação
+
+Existem principalmente 2 formas de instalar o Perplexica Market BR - Com Docker ou Sem Docker. Usar Docker é altamente recomendado.
+
+### Instalação com Docker (Recomendado)
+
+O Perplexica pode ser facilmente executado usando Docker. Simplesmente execute o seguinte comando:
 
 ```bash
-docker run -d -p 3000:3000 -v perplexica-data:/home/perplexica/data -v perplexica-uploads:/home/perplexica/uploads --name perplexica itzcrazykns1337/perplexica:latest
+docker run -d -p 3000:3000 -v perplexica-data:/home/perplexica/data -v perplexica-uploads:/home/perplexica/uploads --name perplexica-market-br itzcrazykns1337/perplexica:latest
 ```
 
-This will pull and start the Perplexica container with the bundled SearxNG search engine. Once running, open your browser and navigate to http://localhost:3000. You can then configure your settings (API keys, models, etc.) directly in the setup screen.
+Isso irá baixar e iniciar o container Perplexica com o mecanismo de busca SearxNG integrado. Uma vez em execução, abra seu navegador e navegue até http://localhost:3000. Você pode então configurar suas configurações (chaves API, modelos, etc.) diretamente na tela de configuração.
 
-**Note**: The image includes both Perplexica and SearxNG, so no additional setup is required. The `-v` flags create persistent volumes for your data and uploaded files.
+**Nota:** A imagem inclui tanto o Perplexica quanto o SearxNG, portanto nenhuma configuração adicional é necessária. As flags `-v` criam volumes persistentes para seus dados e arquivos enviados.
 
-#### Using Perplexica with Your Own SearxNG Instance
+#### Usando com Sua Própria Instância SearxNG
 
-If you already have SearxNG running, you can use the slim version of Perplexica:
+Se você já possui o SearxNG em execução, pode usar a versão slim:
 
 ```bash
-docker run -d -p 3000:3000 -e SEARXNG_API_URL=http://your-searxng-url:8080 -v perplexica-data:/home/perplexica/data -v perplexica-uploads:/home/perplexica/uploads --name perplexica itzcrazykns1337/perplexica:slim-latest
+docker run -d -p 3000:3000 -e SEARXNG_API_URL=http://sua-url-searxng:8080 -v perplexica-data:/home/perplexica/data -v perplexica-uploads:/home/perplexica/uploads --name perplexica-market-br itzcrazykns1337/perplexica:slim-latest
 ```
 
-**Important**: Make sure your SearxNG instance has:
+**Importante:** Certifique-se de que sua instância SearxNG tenha:
+- Formato JSON habilitado nas configurações
+- Mecanismo de busca Wolfram Alpha habilitado
 
-- JSON format enabled in the settings
-- Wolfram Alpha search engine enabled
+#### Configuração Avançada (Compilando do Código-Fonte)
 
-Replace `http://your-searxng-url:8080` with your actual SearxNG URL. Then configure your AI provider settings in the setup screen at http://localhost:3000.
+Se você preferir compilar a partir do código-fonte:
 
-#### Advanced Setup (Building from Source)
-
-If you prefer to build from source or need more control:
-
-1. Ensure Docker is installed and running on your system.
-2. Clone the Perplexica repository:
+1. Certifique-se de que o Docker está instalado e em execução no seu sistema.
+2. Clone este repositório:
 
    ```bash
-   git clone https://github.com/ItzCrazyKns/Perplexica.git
+   git clone https://github.com/seu-usuario/perplexica-market-br.git
+   cd perplexica-market-br
    ```
 
-3. After cloning, navigate to the directory containing the project files.
-
-4. Build and run using Docker:
+3. Compile e execute usando Docker:
 
    ```bash
-   docker build -t perplexica .
-   docker run -d -p 3000:3000 -v perplexica-data:/home/perplexica/data -v perplexica-uploads:/home/perplexica/uploads --name perplexica perplexica
+   docker build -t perplexica-market-br .
+   docker run -d -p 3000:3000 -v perplexica-data:/home/perplexica/data -v perplexica-uploads:/home/perplexica/uploads --name perplexica-market-br perplexica-market-br
    ```
 
-5. Access Perplexica at http://localhost:3000 and configure your settings in the setup screen.
+4. Acesse o Perplexica Market BR em http://localhost:3000 e configure suas configurações.
 
-**Note**: After the containers are built, you can start Perplexica directly from Docker without having to open a terminal.
+### Instalação Sem Docker
 
-### Non-Docker Installation
+1. Instale o SearXNG e permita o formato `JSON` nas configurações. Certifique-se de que o mecanismo de busca Wolfram Alpha também esteja habilitado.
 
-1. Install SearXNG and allow `JSON` format in the SearXNG settings. Make sure Wolfram Alpha search engine is also enabled.
-2. Clone the repository:
-
+2. Clone o repositório:
    ```bash
-   git clone https://github.com/ItzCrazyKns/Perplexica.git
-   cd Perplexica
+   git clone https://github.com/seu-usuario/perplexica-market-br.git
+   cd perplexica-market-br
    ```
 
-3. Install dependencies:
-
+3. Instale as dependências:
    ```bash
-   npm i
+   npm install
    ```
 
-4. Build the application:
-
+4. Compile a aplicação:
    ```bash
    npm run build
    ```
 
-5. Start the application:
-
+5. Inicie a aplicação:
    ```bash
    npm run start
    ```
 
-6. Open your browser and navigate to http://localhost:3000 to complete the setup and configure your settings (API keys, models, SearxNG URL, etc.) in the setup screen.
+6. Abra seu navegador e navegue até http://localhost:3000 para completar a configuração.
 
-**Note**: Using Docker is recommended as it simplifies the setup process, especially for managing environment variables and dependencies.
+**Nota:** Usar Docker é recomendado pois simplifica o processo de configuração.
 
-See the [installation documentation](https://github.com/ItzCrazyKns/Perplexica/tree/master/docs/installation) for more information like updating, etc.
+Veja a [documentação de instalação](https://github.com/ItzCrazyKns/Perplexica/tree/master/docs/installation) do projeto original para mais informações.
 
-### Troubleshooting
+### Solução de Problemas
 
-#### Local OpenAI-API-Compliant Servers
+#### Servidores Locais Compatíveis com OpenAI-API
 
-If Perplexica tells you that you haven't configured any chat model providers, ensure that:
+Se o Perplexica informar que você não configurou nenhum provedor de modelo de chat, certifique-se de que:
 
-1. Your server is running on `0.0.0.0` (not `127.0.0.1`) and on the same port you put in the API URL.
-2. You have specified the correct model name loaded by your local LLM server.
-3. You have specified the correct API key, or if one is not defined, you have put _something_ in the API key field and not left it empty.
+1. Seu servidor está rodando em `0.0.0.0` (não `127.0.0.1`) e na mesma porta que você colocou na URL da API.
+2. Você especificou o nome correto do modelo carregado pelo seu servidor LLM local.
+3. Você especificou a chave API correta, ou colocou algo no campo se a chave não for necessária.
 
-#### Ollama Connection Errors
+#### Erros de Conexão Ollama
 
-If you're encountering an Ollama connection error, it is likely due to the backend being unable to connect to Ollama's API. To fix this issue you can:
+Se você estiver encontrando um erro de conexão Ollama:
 
-1. **Check your Ollama API URL:** Ensure that the API URL is correctly set in the settings menu.
-2. **Update API URL Based on OS:**
-
+1. **Verifique sua URL da API Ollama:** Certifique-se de que a URL da API está corretamente definida no menu de configurações.
+2. **Atualize a URL da API com Base no SO:**
    - **Windows:** Use `http://host.docker.internal:11434`
    - **Mac:** Use `http://host.docker.internal:11434`
-   - **Linux:** Use `http://<private_ip_of_host>:11434`
+   - **Linux:** Use `http://<ip_privado_do_host>:11434`
 
-   Adjust the port number if you're using a different one.
+3. **Usuários Linux - Exponha o Ollama para a Rede:**
+   - Dentro de `/etc/systemd/system/ollama.service`, adicione `Environment="OLLAMA_HOST=0.0.0.0:11434"`
+   - Recarregue a configuração: `systemctl daemon-reload`
+   - Reinicie o Ollama: `systemctl restart ollama`
+   - Certifique-se de que a porta não está bloqueada pelo firewall
 
-3. **Linux Users - Expose Ollama to Network:**
+Para mais detalhes de solução de problemas, consulte a [documentação original](https://github.com/ItzCrazyKns/Perplexica).
 
-   - Inside `/etc/systemd/system/ollama.service`, you need to add `Environment="OLLAMA_HOST=0.0.0.0:11434"`. (Change the port number if you are using a different one.) Then reload the systemd manager configuration with `systemctl daemon-reload`, and restart Ollama by `systemctl restart ollama`. For more information see [Ollama docs](https://github.com/ollama/ollama/blob/main/docs/faq.md#setting-environment-variables-on-linux)
+## 🔍 Usando como Motor de Busca
 
-   - Ensure that the port (default is 11434) is not blocked by your firewall.
+Para usar o Perplexica Market BR como motor de busca padrão do seu navegador:
 
-#### Lemonade Connection Errors
+1. Abra as configurações do seu navegador
+2. Navegue até a seção 'Motores de Busca'
+3. Adicione uma nova busca de site com a URL: `http://localhost:3000/?q=%s`
+4. Substitua `localhost` pelo seu IP ou domínio se não estiver hospedado localmente
+5. Agora você pode usar o Perplexica Market BR diretamente da barra de pesquisa!
 
-If you're encountering a Lemonade connection error, it is likely due to the backend being unable to connect to Lemonade's API. To fix this issue you can:
+## 🔌 Usando a API
 
-1. **Check your Lemonade API URL:** Ensure that the API URL is correctly set in the settings menu.
-2. **Update API URL Based on OS:**
+O Perplexica Market BR mantém toda a funcionalidade da API do projeto original. Você pode executar buscas, usar múltiplos modelos e obter respostas para suas consultas.
 
-   - **Windows:** Use `http://host.docker.internal:8000`
-   - **Mac:** Use `http://host.docker.internal:8000`
-   - **Linux:** Use `http://<private_ip_of_host>:8000`
+Para mais detalhes, confira a [documentação completa da API](https://github.com/ItzCrazyKns/Perplexica/tree/master/docs/API/SEARCH.md).
 
-   Adjust the port number if you're using a different one.
+## 🤝 Contribuição
 
-3. **Ensure Lemonade Server is Running:**
+Contribuições são bem-vindas! Se você encontrou bugs, tem ideias para melhorias ou quer adicionar novos recursos voltados para o público brasileiro:
 
-   - Make sure your Lemonade server is running and accessible on the configured port (default is 8000).
-   - Verify that Lemonade is configured to accept connections from all interfaces (`0.0.0.0`), not just localhost (`127.0.0.1`).
-   - Ensure that the port (default is 8000) is not blocked by your firewall.
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/NovaFuncionalidade`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Push para a branch (`git push origin feature/NovaFuncionalidade`)
+5. Abra um Pull Request
 
-## Using as a Search Engine
+### Contribuindo para o Projeto Original
 
-If you wish to use Perplexica as an alternative to traditional search engines like Google or Bing, or if you want to add a shortcut for quick access from your browser's search bar, follow these steps:
+Se você desenvolver melhorias que possam beneficiar o projeto original Perplexica, considere contribuir também para o [repositório upstream](https://github.com/ItzCrazyKns/Perplexica).
 
-1. Open your browser's settings.
-2. Navigate to the 'Search Engines' section.
-3. Add a new site search with the following URL: `http://localhost:3000/?q=%s`. Replace `localhost` with your IP address or domain name, and `3000` with the port number if Perplexica is not hosted locally.
-4. Click the add button. Now, you can use Perplexica directly from your browser's search bar.
+## 💬 Suporte
 
-## Using Perplexica's API
+Se você tiver alguma dúvida ou feedback sobre esta versão brasileira:
 
-Perplexica also provides an API for developers looking to integrate its powerful search engine into their own applications. You can run searches, use multiple models and get answers to your queries.
+- Abra uma [issue](https://github.com/seu-usuario/perplexica-market-br/issues) neste repositório
+- Entre no [servidor Discord](https://discord.gg/EFwsmQDgAu) do projeto original
+- Para questões específicas da versão brasileira, use as issues deste repositório
 
-For more details, check out the full documentation [here](https://github.com/ItzCrazyKns/Perplexica/tree/master/docs/API/SEARCH.md).
+## 📄 Licença
 
-## Expose Perplexica to network
+Este projeto mantém a mesma licença MIT do [Perplexica original](https://github.com/ItzCrazyKns/Perplexica/blob/master/LICENSE).
 
-Perplexica runs on Next.js and handles all API requests. It works right away on the same network and stays accessible even with port forwarding.
+```
+MIT License
 
-## One-Click Deployment
+Copyright (c) 2025 - Perplexica Market BR (Fork)
+Copyright (c) 2024 - ItzCrazyKns (Projeto Original)
+```
 
-[![Deploy to Sealos](https://raw.githubusercontent.com/labring-actions/templates/main/Deploy-on-Sealos.svg)](https://usw.sealos.io/?openapp=system-template%3FtemplateName%3Dperplexica)
-[![Deploy to RepoCloud](https://d16t0pc4846x52.cloudfront.net/deploylobe.svg)](https://repocloud.io/details/?app_id=267)
-[![Run on ClawCloud](https://raw.githubusercontent.com/ClawCloud/Run-Template/refs/heads/main/Run-on-ClawCloud.svg)](https://template.run.claw.cloud/?referralCode=U11MRQ8U9RM4&openapp=system-fastdeploy%3FtemplateName%3Dperplexica)
-[![Deploy on Hostinger](https://assets.hostinger.com/vps/deploy.svg)](https://www.hostinger.com/vps/docker-hosting?compose_url=https://raw.githubusercontent.com/ItzCrazyKns/Perplexica/refs/heads/master/docker-compose.yaml)
+## 🙏 Agradecimentos
 
-## Upcoming Features
+### Ao Projeto Original
+- **[ItzCrazyKns](https://github.com/ItzCrazyKns)** - Criador do Perplexica
+- Toda a **[comunidade Perplexica](https://github.com/ItzCrazyKns/Perplexica/graphs/contributors)** - Pelos contribuidores incríveis
+- **[Warp Terminal](https://www.warp.dev/perplexica)** - Pelo patrocínio ao projeto original
 
-- [x] Add settings page
-- [x] Adding support for local LLMs
-- [x] History Saving features
-- [x] Introducing various Focus Modes
-- [x] Adding API support
-- [x] Adding Discover
-- [ ] Finalizing Copilot Mode
+### Tecnologias Utilizadas
+- [Next.js](https://nextjs.org/) - Framework React
+- [SearxNG](https://github.com/searxng/searxng) - Meta motor de busca
+- [Ollama](https://ollama.ai/) - Execução de LLMs locais
+- [TailwindCSS](https://tailwindcss.com/) - Framework CSS
 
-## Support Us
+### Comunidade Open Source
+Agradecimento especial a toda comunidade open source que torna projetos como este possíveis! 🚀
 
-If you find Perplexica useful, consider giving us a star on GitHub. This helps more people discover Perplexica and supports the development of new features. Your support is greatly appreciated.
+---
 
-### Donations
+<div align="center">
 
-We also accept donations to help sustain our project. If you would like to contribute, you can use the following options to donate. Thank you for your support!
+**⭐ Se este projeto foi útil para você, considere dar uma estrela!**
 
-| Ethereum                                              |
-| ----------------------------------------------------- |
-| Address: `0xB025a84b2F269570Eb8D4b05DEdaA41D8525B6DD` |
+**🔗 Não se esqueça de também apoiar o [projeto original](https://github.com/ItzCrazyKns/Perplexica)!**
 
-## Contribution
+---
 
-Perplexica is built on the idea that AI and large language models should be easy for everyone to use. If you find bugs or have ideas, please share them in via GitHub Issues. For more information on contributing to Perplexica you can read the [CONTRIBUTING.md](CONTRIBUTING.md) file to learn more about Perplexica and how you can contribute to it.
+Feito com ❤️ para a comunidade brasileira | Baseado no incrível [Perplexica](https://github.com/ItzCrazyKns/Perplexica)
 
-## Help and Support
-
-If you have any questions or feedback, please feel free to reach out to us. You can create an issue on GitHub or join our Discord server. There, you can connect with other users, share your experiences and reviews, and receive more personalized help. [Click here](https://discord.gg/EFwsmQDgAu) to join the Discord server. To discuss matters outside of regular support, feel free to contact me on Discord at `itzcrazykns`.
-
-Thank you for exploring Perplexica, the AI-powered search engine designed to enhance your search experience. We are constantly working to improve Perplexica and expand its capabilities. We value your feedback and contributions which help us make Perplexica even better. Don't forget to check back for updates and new features!
-#   P e r p l e x i c a - - - B R  
+</div>#   P e r p l e x i c a - M a r k e t - B R  
  
