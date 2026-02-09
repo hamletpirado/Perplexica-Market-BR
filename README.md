@@ -292,8 +292,5 @@ Agradecimento especial a toda comunidade open source que torna projetos como est
 
 **🔗 Não se esqueça de também apoiar o [projeto original](https://github.com/ItzCrazyKns/Perplexica)!**
 
----
-
-Feito com ❤️ para a comunidade brasileira | Baseado no incrível [Perplexica](https://github.com/ItzCrazyKns/Perplexica)
 
 </div>
